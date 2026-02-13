@@ -1,0 +1,461 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom Fantasy Color Palette */
+  --color-parchment-50: #fdfbf7;
+  --color-parchment-100: #f9f5eb;
+  --color-parchment-200: #f3ead5;
+  --color-parchment-300: #e8d9b8;
+  --color-parchment-400: #d9c199;
+  --color-parchment-500: #c9a977;
+  --color-parchment-600: #b38f5d;
+  --color-parchment-700: #8f6f48;
+  --color-parchment-800: #6b5338;
+  --color-parchment-900: #4a3925;
+  
+  --color-burgundy-50: #fdf4f4;
+  --color-burgundy-100: #fbe8e8;
+  --color-burgundy-200: #f5c5c5;
+  --color-burgundy-300: #ed9999;
+  --color-burgundy-400: #e26161;
+  --color-burgundy-500: #c93737;
+  --color-burgundy-600: #a62020;
+  --color-burgundy-700: #851919;
+  --color-burgundy-800: #641313;
+  --color-burgundy-900: #470e0e;
+  
+  --color-forest-50: #f4f7f4;
+  --color-forest-100: #e6ede6;
+  --color-forest-200: #c9d9c9;
+  --color-forest-300: #9dbf9d;
+  --color-forest-400: #6a9f6a;
+  --color-forest-500: #437d43;
+  --color-forest-600: #2f5f2f;
+  --color-forest-700: #244a24;
+  --color-forest-800: #1a381a;
+  --color-forest-900: #122612;
+  
+  --color-dark-parchment: #1a1410;
+  --color-dark-surface: #252019;
+  --color-dark-border: #3d342a;
+  
+  /* Font Families */
+  --font-family-heading: Cinzel, serif;
+  --font-family-body: "Crimson Text", Georgia, serif;
+  --font-family-display: "IM Fell English", serif;
+  --font-family-sans: Inter, system-ui, sans-serif;
+  
+  /* Border Radius */
+  --radius-medieval: 0.25rem;
+  
+  /* Animations */
+  --animate-dice-roll: diceRoll 0.5s ease-in-out;
+  --animate-fade-in: fadeIn 0.3s ease-in;
+  --animate-slide-up: slideUp 0.4s ease-out;
+}
+
+/* Global CSS Variables for Fantasy Theme */
+:root {
+  --parchment-overlay: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05' /%3E%3C/svg%3E");
+  
+  /* Light mode colors */
+  --background-main: #fdfbf7;
+  --text-primary: #2a1810;
+  --text-secondary: #6b5338;
+  --accent-burgundy: #c93737;
+  --accent-gold: #c9a977;
+}
+
+.dark {
+  --background-main: #1a1410;
+  --text-primary: #f9f5eb;
+  --text-secondary: #d9c199;
+  --accent-burgundy: #e26161;
+  --accent-gold: #d9c199;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-body);
+  background-color: var(--background-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Parchment Background Effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--parchment-overlay);
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+body.dark::before {
+  opacity: 0.1;
+}
+
+/* Smooth Transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom Scrollbar - Medieval Theme */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-main);
+  border-left: 1px solid rgba(139, 99, 66, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #c9a977 0%, #8f6f48 100%);
+  border-radius: 6px;
+  border: 2px solid var(--background-main);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #d9c199 0%, #b38f5d 100%);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6b5338 0%, #4a3925 100%);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #8f6f48 0%, #6b5338 100%);
+}
+
+/* Fix centering - Tailwind v4 compatibility */
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Focus Styles for Accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent-burgundy);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Keyframe Animations */
+@keyframes diceRoll {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(90deg) scale(1.1); }
+  50% { transform: rotate(180deg) scale(1); }
+  75% { transform: rotate(270deg) scale(1.1); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Utility Classes */
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow-medieval {
+    text-shadow: 2px 2px 4px rgba(42, 24, 16, 0.3);
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .dark .glass-effect {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+
+}
+
+/* Animation utility classes */
+.animate-dice-roll {
+  animation: diceRoll 0.5s ease-in-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+/* Print Styles */
+@media print {
+  body::before {
+    display: none;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Global CSS Variables for Fantasy Theme */
+:root {
+  --parchment-overlay: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05' /%3E%3C/svg%3E");
+
+  /* Light mode colors */
+  --background-main: #fdfbf7;
+  --text-primary: #2a1810;
+  --text-secondary: #6b5338;
+  --accent-burgundy: #c93737;
+  --accent-gold: #c9a977;
+}
+
+.dark {
+  --background-main: #1a1410;
+  --text-primary: #f9f5eb;
+  --text-secondary: #d9c199;
+  --accent-burgundy: #e26161;
+  --accent-gold: #d9c199;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Crimson Text", Georgia, serif;
+  background-color: var(--background-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Parchment Background Effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--parchment-overlay);
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+body.dark::before {
+  opacity: 0.1;
+}
+
+/* Smooth Transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom Scrollbar - Medieval Theme */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-main);
+  border-left: 1px solid rgba(139, 99, 66, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #c9a977 0%, #8f6f48 100%);
+  border-radius: 6px;
+  border: 2px solid var(--background-main);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #d9c199 0%, #b38f5d 100%);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6b5338 0%, #4a3925 100%);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #8f6f48 0%, #6b5338 100%);
+}
+
+/* Typography Enhancements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cinzel", serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Focus Styles for Accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent-burgundy);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Utility Classes */
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-shadow-medieval {
+    text-shadow: 2px 2px 4px rgba(42, 24, 16, 0.3);
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .dark .glass-effect {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .parchment-card {
+    background: linear-gradient(145deg, #fdfbf7 0%, #f3ead5 50%, #e8d9b8 100%);
+    box-shadow:
+      0 1px 2px rgba(139, 99, 66, 0.08),
+      0 4px 8px rgba(139, 99, 66, 0.12),
+      0 8px 16px rgba(139, 99, 66, 0.08);
+    border: 1px solid rgba(139, 99, 66, 0.25);
+    border-top-color: rgba(255, 255, 255, 0.5);
+    border-left-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .dark .parchment-card {
+    background: linear-gradient(145deg, #2a231c 0%, #1f1914 50%, #171310 100%);
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.2),
+      0 4px 8px rgba(0, 0, 0, 0.25),
+      0 8px 16px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(217, 193, 153, 0.12);
+    border-top-color: rgba(217, 193, 153, 0.15);
+  }
+
+  /* Card hover animation */
+  .card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 2px 4px rgba(139, 99, 66, 0.1),
+      0 8px 16px rgba(139, 99, 66, 0.15),
+      0 16px 32px rgba(139, 99, 66, 0.1);
+  }
+
+  .dark .card-hover:hover {
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.2),
+      0 8px 16px rgba(0, 0, 0, 0.3),
+      0 16px 32px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Glass effect enhancement */
+  .glass-enhanced {
+    background: rgba(253, 251, 247, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(139, 99, 66, 0.2);
+    box-shadow:
+      0 4px 12px rgba(139, 99, 66, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .dark .glass-enhanced {
+    background: rgba(26, 20, 16, 0.9);
+    border: 1px solid rgba(217, 193, 153, 0.1);
+    box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  }
+}
+
+/* Animation Classes */
+.animate-dice-roll {
+  animation: diceRoll 0.5s ease-in-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+/* Print Styles */
+@media print {
+  body::before {
+    display: none;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

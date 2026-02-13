@@ -1,0 +1,609 @@
+{
+  "barbarian": {
+    "className": "Barbarian",
+    "hitDie": 12,
+    "primaryAbility": ["strength"],
+    "savingThrows": ["strength", "constitution"],
+    "skillProficiencies": {
+      "choose": 2,
+      "from": ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"]
+    },
+    "armorProficiencies": ["Light armor", "Medium armor", "Shields"],
+    "weaponProficiencies": ["Simple weapons", "Martial weapons"],
+    "startingEquipment": [
+      "Greataxe or any martial melee weapon",
+      "Two handaxes or any simple weapon",
+      "Explorer's pack",
+      "Four javelins"
+    ],
+    "classFeatures": [
+      {
+        "level": 1,
+        "name": "Rage",
+        "description": "Enter a rage as a bonus action. Gain advantage on STR checks and saves, bonus melee damage, and resistance to physical damage."
+      },
+      {
+        "level": 1,
+        "name": "Unarmored Defense",
+        "description": "While not wearing armor, AC = 10 + DEX modifier + CON modifier."
+      }
+    ],
+    "description": "A fierce warrior of primitive background who can enter a battle rage.",
+    "subclassLevel": 3,
+    "availableSubclasses": [
+      {
+        "name": "Path of the Berserker",
+        "description": "Channel rage into unmatched ferocity, becoming a relentless force of destruction.",
+        "source": "PHB"
+      },
+      {
+        "name": "Path of the Totem Warrior",
+        "description": "Draw spiritual power from animal totems, gaining primal abilities in combat.",
+        "source": "PHB"
+      }
+    ]
+  },
+  "bard": {
+    "className": "Bard",
+    "hitDie": 8,
+    "primaryAbility": ["charisma"],
+    "savingThrows": ["dexterity", "charisma"],
+    "skillProficiencies": {
+      "choose": 3,
+      "from": ["Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival"]
+    },
+    "armorProficiencies": ["Light armor"],
+    "weaponProficiencies": ["Simple weapons", "Hand crossbows", "Longswords", "Rapiers", "Shortswords"],
+    "startingEquipment": [
+      "Rapier or longsword or any simple weapon",
+      "Diplomat's pack or entertainer's pack",
+      "Lute or any musical instrument",
+      "Leather armor and dagger"
+    ],
+    "classFeatures": [
+      {
+        "level": 1,
+        "name": "Spellcasting",
+        "description": "Cast bard spells using Charisma as your spellcasting ability."
+      },
+      {
+        "level": 1,
+        "name": "Bardic Inspiration",
+        "description": "Grant an ally a d6 bonus die they can add to ability checks, attack rolls, or saving throws."
+      }
+    ],
+    "description": "An inspiring magician whose power echoes the music of creation.",
+    "subclassLevel": 3,
+    "availableSubclasses": [
+      {
+        "name": "College of Lore",
+        "description": "Master knowledge and secrets, using cutting words and additional magical secrets.",
+        "source": "PHB"
+      },
+      {
+        "name": "College of Valor",
+        "description": "Inspire greatness in battle, combining magic with martial prowess.",
+        "source": "PHB"
+      }
+    ]
+  },
+  "cleric": {
+    "className": "Cleric",
+    "hitDie": 8,
+    "primaryAbility": ["wisdom"],
+    "savingThrows": ["wisdom", "charisma"],
+    "skillProficiencies": {
+      "choose": 2,
+      "from": ["History", "Insight", "Medicine", "Persuasion", "Religion"]
+    },
+    "armorProficiencies": ["Light armor", "Medium armor", "Shields"],
+    "weaponProficiencies": ["Simple weapons"],
+    "startingEquipment": [
+      "Mace or warhammer",
+      "Scale mail, leather armor, or chain mail",
+      "Light crossbow and 20 bolts or any simple weapon",
+      "Priest's pack or explorer's pack",
+      "Shield and holy symbol"
+    ],
+    "classFeatures": [
+      {
+        "level": 1,
+        "name": "Spellcasting",
+        "description": "Cast cleric spells using Wisdom as your spellcasting ability."
+      },
+      {
+        "level": 1,
+        "name": "Divine Domain",
+        "description": "Choose a divine domain that grants you domain spells and other features."
+      }
+    ],
+    "description": "A priestly champion who wields divine magic in service of a higher power.",
+    "subclassLevel": 1,
+    "availableSubclasses": [
+      {
+        "name": "Knowledge Domain",
+        "description": "Seek and preserve knowledge, gaining expertise and divine insight.",
+        "source": "PHB"
+      },
+      {
+        "name": "Life Domain",
+        "description": "Focus on healing and vitality, becoming the ultimate healer.",
+        "source": "PHB"
+      },
+      {
+        "name": "Light Domain",
+        "description": "Wield the power of light and fire against darkness.",
+        "source": "PHB"
+      },
+      {
+        "name": "Nature Domain",
+        "description": "Channel the primal forces of nature and protect the wild.",
+        "source": "PHB"
+      },
+      {
+        "name": "Tempest Domain",
+        "description": "Command storms and lightning, becoming a force of nature.",
+        "source": "PHB"
+      },
+      {
+        "name": "Trickery Domain",
+        "description": "Master deception and illusion through divine trickery.",
+        "source": "PHB"
+      },
+      {
+        "name": "War Domain",
+        "description": "Become a divine warrior, blessed with martial prowess.",
+        "source": "PHB"
+      }
+    ]
+  },
+  "druid": {
+    "className": "Druid",
+    "hitDie": 8,
+    "primaryAbility": ["wisdom"],
+    "savingThrows": ["intelligence", "wisdom"],
+    "skillProficiencies": {
+      "choose": 2,
+      "from": ["Arcana", "Animal Handling", "Insight", "Medicine", "Nature", "Perception", "Religion", "Survival"]
+    },
+    "armorProficiencies": ["Light armor", "Medium armor", "Shields"],
+    "weaponProficiencies": ["Clubs", "Daggers", "Darts", "Javelins", "Maces", "Quarterstaffs", "Scimitars", "Sickles", "Slings", "Spears"],
+    "startingEquipment": [
+      "Wooden shield or any simple weapon",
+      "Scimitar or any simple melee weapon",
+      "Leather armor, explorer's pack, and druidic focus"
+    ],
+    "classFeatures": [
+      {
+        "level": 1,
+        "name": "Spellcasting",
+        "description": "Cast druid spells using Wisdom as your spellcasting ability."
+      },
+      {
+        "level": 1,
+        "name": "Druidic",
+        "description": "You know Druidic, the secret language of druids."
+      }
+    ],
+    "description": "A priest of the Old Faith, wielding the powers of nature and adopting animal forms.",
+    "subclassLevel": 2,
+    "availableSubclasses": [
+      {
+        "name": "Circle of the Land",
+        "description": "Draw power from the land itself, gaining spells based on your chosen terrain.",
+        "source": "PHB"
+      },
+      {
+        "name": "Circle of the Moon",
+        "description": "Master wild shape, transforming into powerful beasts.",
+        "source": "PHB"
+      }
+    ]
+  },
+  "fighter": {
+    "className": "Fighter",
+    "hitDie": 10,
+    "primaryAbility": ["strength", "dexterity"],
+    "savingThrows": ["strength", "constitution"],
+    "skillProficiencies": {
+      "choose": 2,
+      "from": ["Acrobatics", "Animal Handling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival"]
+    },
+    "armorProficiencies": ["All armor", "Shields"],
+    "weaponProficiencies": ["Simple weapons", "Martial weapons"],
+    "startingEquipment": [
+      "Chain mail or leather armor, longbow, and 20 arrows",
+      "Martial weapon and shield or two martial weapons",
+      "Light crossbow and 20 bolts or two handaxes",
+      "Dungeoneer's pack or explorer's pack"
+    ],
+    "classFeatures": [
+      {
+        "level": 1,
+        "name": "Fighting Style",
+        "description": "Choose a fighting style specialty such as Archery, Defense, Dueling, or Great Weapon Fighting."
+      },
+      {
+        "level": 1,
+        "name": "Second Wind",
+        "description": "Regain hit points equal to 1d10 + fighter level as a bonus action."
+      }
+    ],
+    "description": "A master of martial combat, skilled with a variety of weapons and armor.",
+    "subclassLevel": 3,
+    "availableSubclasses": [
+      {
+        "name": "Champion",
+        "description": "Focus on physical excellence and devastating critical hits.",
+        "source": "PHB"
+      },
+      {
+        "name": "Battle Master",
+        "description": "Use superiority dice and combat maneuvers to control the battlefield.",
+        "source": "PHB"
+      },
+      {
+        "name": "Eldritch Knight",
+        "description": "Combine martial prowess with wizardry and arcane magic.",
+        "source": "PHB"
+      }
+    ]
+  },
+  "monk": {
+    "className": "Monk",
+    "hitDie": 8,
+    "primaryAbility": ["dexterity", "wisdom"],
+    "savingThrows": ["strength", "dexterity"],
+    "skillProficiencies": {
+      "choose": 2,
+      "from": ["Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth"]
+    },
+    "armorProficiencies": [],
+    "weaponProficiencies": ["Simple weapons", "Shortswords"],
+    "startingEquipment": [
+      "Shortsword or any simple weapon",
+      "Dungeoneer's pack or explorer's pack",
+      "10 darts"
+    ],
+    "classFeatures": [
+      {
+        "level": 1,
+        "name": "Unarmored Defense",
+        "description": "While not wearing armor, AC = 10 + DEX modifier + WIS modifier."
+      },
+      {
+        "level": 1,
+        "name": "Martial Arts",
+        "description": "Use DEX instead of STR for unarmed strikes and monk weapons. Deal 1d4 damage with unarmed strikes."
+      }
+    ],
+    "description": "A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection.",
+    "subclassLevel": 3,
+    "availableSubclasses": [
+      {
+        "name": "Way of the Open Hand",
+        "description": "Master unarmed combat techniques to manipulate and harm foes.",
+        "source": "PHB"
+      },
+      {
+        "name": "Way of Shadow",
+        "description": "Use stealth and shadow magic to become a ninja-like warrior.",
+        "source": "PHB"
+      },
+      {
+        "name": "Way of the Four Elements",
+        "description": "Harness elemental power through ki, bending the elements to your will.",
+        "source": "PHB"
+      }
+    ]
+  },
+  "paladin": {
+    "className": "Paladin",
+    "hitDie": 10,
+    "primaryAbility": ["strength", "charisma"],
+    "savingThrows": ["wisdom", "charisma"],
+    "skillProficiencies": {
+      "choose": 2,
+      "from": ["Athletics", "Insight", "Intimidation", "Medicine", "Persuasion", "Religion"]
+    },
+    "armorProficiencies": ["All armor", "Shields"],
+    "weaponProficiencies": ["Simple weapons", "Martial weapons"],
+    "startingEquipment": [
+      "Martial weapon and shield or two martial weapons",
+      "Five javelins or any simple melee weapon",
+      "Priest's pack or explorer's pack",
+      "Chain mail and holy symbol"
+    ],
+    "classFeatures": [
+      {
+        "level": 1,
+        "name": "Divine Sense",
+        "description": "Detect the presence of celestials, fiends, and undead within 60 feet."
+      },
+      {
+        "level": 1,
+        "name": "Lay on Hands",
+        "description": "Heal wounds or cure diseases by touch. Pool of healing = paladin level × 5."
+      }
+    ],
+    "description": "A holy warrior bound to a sacred oath, wielding divine magic and martial prowess.",
+    "subclassLevel": 3,
+    "availableSubclasses": [
+      {
+        "name": "Oath of Devotion",
+        "description": "Uphold the ideals of justice, virtue, and order as a knight in shining armor.",
+        "source": "PHB"
+      },
+      {
+        "name": "Oath of the Ancients",
+        "description": "Preserve light and life, drawing power from nature and ancient fey magic.",
+        "source": "PHB"
+      },
+      {
+        "name": "Oath of Vengeance",
+        "description": "Punish wrongdoers and hunt down evil with relentless determination.",
+        "source": "PHB"
+      }
+    ]
+  },
+  "ranger": {
+    "className": "Ranger",
+    "hitDie": 10,
+    "primaryAbility": ["dexterity", "wisdom"],
+    "savingThrows": ["strength", "dexterity"],
+    "skillProficiencies": {
+      "choose": 3,
+      "from": ["Animal Handling", "Athletics", "Insight", "Investigation", "Nature", "Perception", "Stealth", "Survival"]
+    },
+    "armorProficiencies": ["Light armor", "Medium armor", "Shields"],
+    "weaponProficiencies": ["Simple weapons", "Martial weapons"],
+    "startingEquipment": [
+      "Scale mail or leather armor",
+      "Two shortswords or two simple melee weapons",
+      "Dungeoneer's pack or explorer's pack",
+      "Longbow and quiver of 20 arrows"
+    ],
+    "classFeatures": [
+      {
+        "level": 1,
+        "name": "Favored Enemy",
+        "description": "Choose a type of favored enemy. Gain advantages when tracking and recalling information about them."
+      },
+      {
+        "level": 1,
+        "name": "Natural Explorer",
+        "description": "Choose a favored terrain. Gain benefits when traveling in that terrain."
+      }
+    ],
+    "description": "A warrior who uses martial prowess and nature magic to combat threats on the edges of civilization.",
+    "subclassLevel": 3,
+    "availableSubclasses": [
+      {
+        "name": "Hunter",
+        "description": "Master techniques for fighting hordes or individual powerful foes.",
+        "source": "PHB"
+      },
+      {
+        "name": "Beast Master",
+        "description": "Forge a bond with an animal companion that fights alongside you.",
+        "source": "PHB"
+      }
+    ]
+  },
+  "rogue": {
+    "className": "Rogue",
+    "hitDie": 8,
+    "primaryAbility": ["dexterity"],
+    "savingThrows": ["dexterity", "intelligence"],
+    "skillProficiencies": {
+      "choose": 4,
+      "from": ["Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight of Hand", "Stealth"]
+    },
+    "armorProficiencies": ["Light armor"],
+    "weaponProficiencies": ["Simple weapons", "Hand crossbows", "Longswords", "Rapiers", "Shortswords"],
+    "startingEquipment": [
+      "Rapier or shortsword",
+      "Shortbow and quiver of 20 arrows or shortsword",
+      "Burglar's pack, dungeoneer's pack, or explorer's pack",
+      "Leather armor, two daggers, and thieves' tools"
+    ],
+    "classFeatures": [
+      {
+        "level": 1,
+        "name": "Expertise",
+        "description": "Double your proficiency bonus for two skills or tools you're proficient with."
+      },
+      {
+        "level": 1,
+        "name": "Sneak Attack",
+        "description": "Deal extra 1d6 damage when you have advantage or an ally is within 5 feet of target."
+      }
+    ],
+    "description": "A scoundrel who uses stealth and trickery to overcome obstacles and enemies.",
+    "subclassLevel": 3,
+    "availableSubclasses": [
+      {
+        "name": "Thief",
+        "description": "Master of burglary, with quick hands and a knack for finding traps.",
+        "source": "PHB"
+      },
+      {
+        "name": "Assassin",
+        "description": "Master of dealing death from the shadows with deadly precision.",
+        "source": "PHB"
+      },
+      {
+        "name": "Arcane Trickster",
+        "description": "Combine stealth with enchantment and illusion magic.",
+        "source": "PHB"
+      }
+    ]
+  },
+  "sorcerer": {
+    "className": "Sorcerer",
+    "hitDie": 6,
+    "primaryAbility": ["charisma"],
+    "savingThrows": ["constitution", "charisma"],
+    "skillProficiencies": {
+      "choose": 2,
+      "from": ["Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion"]
+    },
+    "armorProficiencies": [],
+    "weaponProficiencies": ["Daggers", "Darts", "Slings", "Quarterstaffs", "Light crossbows"],
+    "startingEquipment": [
+      "Light crossbow and 20 bolts or any simple weapon",
+      "Component pouch or arcane focus",
+      "Dungeoneer's pack or explorer's pack",
+      "Two daggers"
+    ],
+    "classFeatures": [
+      {
+        "level": 1,
+        "name": "Spellcasting",
+        "description": "Cast sorcerer spells using Charisma as your spellcasting ability."
+      },
+      {
+        "level": 1,
+        "name": "Sorcerous Origin",
+        "description": "Choose the source of your innate magical power, such as Draconic Bloodline or Wild Magic."
+      }
+    ],
+    "description": "A spellcaster who draws on inherent magic from a gift or bloodline.",
+    "subclassLevel": 1,
+    "availableSubclasses": [
+      {
+        "name": "Draconic Bloodline",
+        "description": "Draw power from a draconic ancestor, gaining draconic resilience and elemental affinity.",
+        "source": "PHB"
+      },
+      {
+        "name": "Wild Magic",
+        "description": "Channel unpredictable chaos magic that can surge with random effects.",
+        "source": "PHB"
+      }
+    ]
+  },
+  "warlock": {
+    "className": "Warlock",
+    "hitDie": 8,
+    "primaryAbility": ["charisma"],
+    "savingThrows": ["wisdom", "charisma"],
+    "skillProficiencies": {
+      "choose": 2,
+      "from": ["Arcana", "Deception", "History", "Intimidation", "Investigation", "Nature", "Religion"]
+    },
+    "armorProficiencies": ["Light armor"],
+    "weaponProficiencies": ["Simple weapons"],
+    "startingEquipment": [
+      "Light crossbow and 20 bolts or any simple weapon",
+      "Component pouch or arcane focus",
+      "Scholar's pack or dungeoneer's pack",
+      "Leather armor, any simple weapon, and two daggers"
+    ],
+    "classFeatures": [
+      {
+        "level": 1,
+        "name": "Otherworldly Patron",
+        "description": "Choose a patron such as The Fiend, The Archfey, or The Great Old One."
+      },
+      {
+        "level": 1,
+        "name": "Pact Magic",
+        "description": "Cast warlock spells using Charisma. Regain all spell slots on a short rest."
+      }
+    ],
+    "description": "A wielder of magic derived from a bargain with an extraplanar entity.",
+    "subclassLevel": 1,
+    "availableSubclasses": [
+      {
+        "name": "The Fiend",
+        "description": "Make a pact with a demon or devil, gaining dark powers and resistance to fire.",
+        "source": "PHB"
+      },
+      {
+        "name": "The Archfey",
+        "description": "Forge a bargain with a fey lord or lady, gaining enchantment and trickery powers.",
+        "source": "PHB"
+      },
+      {
+        "name": "The Great Old One",
+        "description": "Serve an incomprehensible cosmic entity, gaining telepathy and mind-bending magic.",
+        "source": "PHB"
+      }
+    ]
+  },
+  "wizard": {
+    "className": "Wizard",
+    "hitDie": 6,
+    "primaryAbility": ["intelligence"],
+    "savingThrows": ["intelligence", "wisdom"],
+    "skillProficiencies": {
+      "choose": 2,
+      "from": ["Arcana", "History", "Insight", "Investigation", "Medicine", "Religion"]
+    },
+    "armorProficiencies": [],
+    "weaponProficiencies": ["Daggers", "Darts", "Slings", "Quarterstaffs", "Light crossbows"],
+    "startingEquipment": [
+      "Quarterstaff or dagger",
+      "Component pouch or arcane focus",
+      "Scholar's pack or explorer's pack",
+      "Spellbook"
+    ],
+    "classFeatures": [
+      {
+        "level": 1,
+        "name": "Spellcasting",
+        "description": "Cast wizard spells using Intelligence as your spellcasting ability."
+      },
+      {
+        "level": 1,
+        "name": "Arcane Recovery",
+        "description": "Recover some expended spell slots during a short rest."
+      }
+    ],
+    "description": "A scholarly magic-user capable of manipulating the structures of reality.",
+    "subclassLevel": 2,
+    "availableSubclasses": [
+      {
+        "name": "School of Abjuration",
+        "description": "Master protective magic and shielding wards.",
+        "source": "PHB"
+      },
+      {
+        "name": "School of Conjuration",
+        "description": "Summon creatures and objects from thin air.",
+        "source": "PHB"
+      },
+      {
+        "name": "School of Divination",
+        "description": "Peer into the future and manipulate fate itself.",
+        "source": "PHB"
+      },
+      {
+        "name": "School of Enchantment",
+        "description": "Charm and manipulate the minds of others.",
+        "source": "PHB"
+      },
+      {
+        "name": "School of Evocation",
+        "description": "Master destructive elemental magic and explosive spells.",
+        "source": "PHB"
+      },
+      {
+        "name": "School of Illusion",
+        "description": "Deceive senses and create impossible phantasms.",
+        "source": "PHB"
+      },
+      {
+        "name": "School of Necromancy",
+        "description": "Manipulate life force and command the undead.",
+        "source": "PHB"
+      },
+      {
+        "name": "School of Transmutation",
+        "description": "Transform matter and alter reality's fundamental properties.",
+        "source": "PHB"
+      }
+    ]
+  }
+}
